@@ -1,0 +1,119 @@
+.calculator {
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  background: #121212; /* Fondo oscuro */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.display {
+  background: #1e1e1e; /* Más oscuro que el fondo */
+  color: #ffffff;
+  font-size: 2.2em;
+  padding: 18px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  text-align: right;
+  min-height: 60px;
+  overflow: hidden;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Estilo base de botón minimalista */
+.btn {
+  padding: 16px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  background: #2a2a2a; /* Botón oscuro */
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: #3a3a3a;
+}
+
+.btn:active {
+  background: #444444;
+  transform: translateY(1px);
+}
+
+/* Botones numéricos */
+.btn-number {
+  background: #2a2a2a;
+}
+
+/* Operadores */
+.btn-operator {
+  background: #ff9500;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-operator:hover {
+  background: #e68a00;
+}
+
+/* Botón AC */
+.btn-clear {
+  background: #ff3b30;
+  color: #ffffff;
+  grid-column: span 2;
+}
+
+.btn-clear:hover {
+  background: #e02e25;
+}
+
+/* Botón DEL */
+.btn-delete {
+  background: #ff9f0a;
+  color: #ffffff;
+}
+
+.btn-delete:hover {
+  background: #e68a00;
+}
+
+/* Botón igual */
+.btn-equals {
+  background: #34c759;
+  color: #ffffff;
+  grid-column: span 2;
+  font-weight: 600;
+}
+
+.btn-equals:hover {
+  background: #28a745;
+}
+
+/* Botón 0 */
+.btn-zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    max-width: 100%;
+  }
+
+  .display {
+    font-size: 2em;
+    padding: 15px;
+  }
+
+  .btn {
+    padding: 14px;
+    font-size: 1.1em;
+  }
+}
