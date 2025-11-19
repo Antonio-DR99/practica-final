@@ -1,28 +1,23 @@
 .calculator {
   width: 100%;
   max-width: 320px;
-  padding: 30px;
+  padding: 20px;
   background: #ffffff;
-  border-radius: 25px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .display {
   background: #1a1a1a;
   color: #fff;
-  font-size: 2.8em;
-  padding: 25px 20px;
-  margin-bottom: 25px;
-  border-radius: 15px;
+  font-size: 2.4em;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
   text-align: right;
-  word-wrap: break-word;
-  word-break: break-all;
-  min-height: 70px;
+  min-height: 60px;
   overflow: hidden;
-  font-weight: 300;
-  letter-spacing: 1px;
-  line-height: 1.2;
 }
 
 .buttons {
@@ -31,105 +26,65 @@
   gap: 10px;
 }
 
+/* Estilo base de botón */
 .btn {
-  padding: 20px;
-  font-size: 1.4em;
+  padding: 18px;
+  font-size: 1.3em;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   background: #f0f0f0;
   color: #333;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: 0.15s;
 }
 
 .btn:hover {
   background: #e0e0e0;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .btn:active {
-  transform: translateY(0);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  background: #d5d5d5;
 }
 
-/* Botones de números */
+/* Botones numéricos */
 .btn-number {
-  background: #f5f5f5;
-  color: #333;
+  background: #fafafa;
 }
 
-.btn-number:hover {
-  background: #e8e8e8;
-}
-
-/* Botones de operadores */
+/* Operadores */
 .btn-operator {
-  background: #667eea;
+  background: #5c6bc0;
   color: #fff;
-  font-weight: 700;
 }
 
 .btn-operator:hover {
-  background: #5568d3;
+  background: #4957ad;
 }
 
-.btn-operator:active {
-  background: #4a5bc0;
-}
-
-/* Botón Limpiar */
+/* Botón AC */
 .btn-clear {
-  background: #f44336;
+  background: #e53935;
   color: #fff;
   grid-column: span 2;
-  font-weight: 700;
 }
 
-.btn-clear:hover {
-  background: #d32f2f;
-}
-
-.btn-clear:active {
-  background: #b71c1c;
-}
-
-/* Botón Borrar */
+/* Botón DEL */
 .btn-delete {
-  background: #ff9800;
+  background: #fb8c00;
   color: #fff;
-  grid-column: span 2;
-  font-weight: 700;
 }
 
-.btn-delete:hover {
-  background: #f57c00;
-}
-
-.btn-delete:active {
-  background: #e65100;
-}
-
-/* Botón Igual */
+/* Botón igual */
 .btn-equals {
-  background: #4caf50;
+  background: #43a047;
   color: #fff;
   grid-column: span 2;
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: 700;
 }
 
-.btn-equals:hover {
-  background: #45a049;
-}
-
-.btn-equals:active {
-  background: #3d8b40;
-}
-
-/* Botón Cero */
+/* Botón 0 */
 .btn-zero {
   grid-column: span 2;
 }
@@ -137,17 +92,15 @@
 @media (max-width: 480px) {
   .calculator {
     max-width: 100%;
-    padding: 20px;
   }
 
   .display {
     font-size: 2em;
-    padding: 20px 15px;
-    min-height: 60px;
+    padding: 15px;
   }
 
   .btn {
-    padding: 16px;
-    font-size: 1.2em;
+    padding: 15px;
+    font-size: 1.1em;
   }
 }
