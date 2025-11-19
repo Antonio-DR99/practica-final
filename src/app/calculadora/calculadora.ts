@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-calculadora',
   standalone: true,
   templateUrl: './calculadora.html',
-  styleUrl: './calculadora.css',
+  styleUrls: ['./calculadora.css'],
 })
 export class CalculadoraComponent {
   display = '';

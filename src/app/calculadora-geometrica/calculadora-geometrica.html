@@ -1,1 +1,50 @@
-<p>calculadora-geometrica works!</p>
+<div class="geo-calculator">
+	<h2>Calculadora Geométrica</h2>
+
+	<label for="shape">Figura:</label>
+	<select id="shape" (change)="setShape($any($event.target).value)">
+		<option value="circle">Círculo</option>
+		<option value="rectangle">Rectángulo</option>
+		<option value="square">Cuadrado</option>
+		<option value="triangle">Triángulo</option>
+	</select>
+
+	<div class="inputs">
+		<!-- Círculo -->
+		<div *ngIf="selected === 'circle'">
+			<label>Radio:</label>
+			<input type="number" step="any" [value]="radius" (input)="radius = $any($event.target).value" />
+		</div>
+
+		<!-- Rectángulo -->
+		<div *ngIf="selected === 'rectangle'">
+			<label>Ancho:</label>
+			<input type="number" step="any" [value]="width" (input)="width = $any($event.target).value" />
+			<label>Alto:</label>
+			<input type="number" step="any" [value]="height" (input)="height = $any($event.target).value" />
+		</div>
+
+		<!-- Cuadrado -->
+		<div *ngIf="selected === 'square'">
+			<label>Lado:</label>
+			<input type="number" step="any" [value]="side" (input)="side = $any($event.target).value" />
+		</div>
+
+		<!-- Triángulo -->
+		<div *ngIf="selected === 'triangle'">
+			<label>Base (para área):</label>
+			<input type="number" step="any" [value]="width" (input)="width = $any($event.target).value" />
+			<label>Altura (para área):</label>
+			<input type="number" step="any" [value]="height" (input)="height = $any($event.target).value" />
+		</div>
+	</div>
+
+	<div class="actions">
+		<button (click)="calculate()" class="btn-calc">Calcular</button>
+		<button (click)="resetInputs()" class="btn-reset">Limpiar</button>
+	</div>
+
+	<div class="results">
+		<div><strong>Área:</strong> {{ resultArea ?? '—' }}</div>
+	</div>
+</div>

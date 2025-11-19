@@ -38,3 +38,46 @@ h1 {
     margin-bottom: 20px;
   }
 }
+
+.app-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  color: rgba(255,255,255,0.9);
+  margin-top: 6px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.apps {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 12px;
+}
+
+.card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+  flex: 1 1 420px;
+  max-width: 520px;
+}
+
+.card-title {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+@media (max-width: 900px) {
+  .apps { flex-direction: column; gap: 18px; }
+  .card { max-width: 100%; }
+}
