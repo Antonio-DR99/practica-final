@@ -2,19 +2,19 @@
   width: 100%;
   max-width: 320px;
   padding: 20px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  background: #121212; /* Fondo oscuro */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .display {
-  background: #1a1a1a;
-  color: #fff;
-  font-size: 2.4em;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 12px;
+  background: #1e1e1e; /* Más oscuro que el fondo */
+  color: #ffffff;
+  font-size: 2.2em;
+  padding: 18px;
+  margin-bottom: 18px;
+  border-radius: 10px;
   text-align: right;
   min-height: 60px;
   overflow: hidden;
@@ -26,62 +26,75 @@
   gap: 10px;
 }
 
-/* Estilo base de botón */
+/* Estilo base de botón minimalista */
 .btn {
-  padding: 18px;
-  font-size: 1.3em;
+  padding: 16px;
+  font-size: 1.2em;
   border: none;
   border-radius: 10px;
-  background: #f0f0f0;
-  color: #333;
+  background: #2a2a2a; /* Botón oscuro */
+  color: #ffffff;
   cursor: pointer;
-  font-weight: 600;
-  transition: 0.15s;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.1s;
 }
 
 .btn:hover {
-  background: #e0e0e0;
+  background: #3a3a3a;
 }
 
 .btn:active {
-  background: #d5d5d5;
+  background: #444444;
+  transform: translateY(1px);
 }
 
 /* Botones numéricos */
 .btn-number {
-  background: #fafafa;
+  background: #2a2a2a;
 }
 
 /* Operadores */
 .btn-operator {
-  background: #5c6bc0;
-  color: #fff;
+  background: #ff9500;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .btn-operator:hover {
-  background: #4957ad;
+  background: #e68a00;
 }
 
 /* Botón AC */
 .btn-clear {
-  background: #e53935;
-  color: #fff;
+  background: #ff3b30;
+  color: #ffffff;
   grid-column: span 2;
+}
+
+.btn-clear:hover {
+  background: #e02e25;
 }
 
 /* Botón DEL */
 .btn-delete {
-  background: #fb8c00;
-  color: #fff;
+  background: #ff9f0a;
+  color: #ffffff;
+}
+
+.btn-delete:hover {
+  background: #e68a00;
 }
 
 /* Botón igual */
 .btn-equals {
-  background: #43a047;
-  color: #fff;
+  background: #34c759;
+  color: #ffffff;
   grid-column: span 2;
-  font-size: 1.4em;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.btn-equals:hover {
+  background: #28a745;
 }
 
 /* Botón 0 */
@@ -100,7 +113,7 @@
   }
 
   .btn {
-    padding: 15px;
+    padding: 14px;
     font-size: 1.1em;
   }
 }
