@@ -1,3 +1,18 @@
-<h1>{{ title() }}</h1>
-<app-calculadora></app-calculadora>
+<header class="app-header">
+	<h1>{{ title() }}</h1>
+	<p class="subtitle">Herramientas de práctica: calculadora aritmética y calculadora geométrica</p>
+</header>
+
+<main class="apps">
+	<section class="card">
+		<h3 class="card-title">Calculadora Aritmética</h3>
+		<app-calculadora></app-calculadora>
+	</section>
+
+	<section class="card">
+		<h3 class="card-title">Calculadora Geométrica</h3>
+		<app-calculadora-geometrica></app-calculadora-geometrica>
+	</section>
+</main>
+
 <router-outlet />
