@@ -1,1 +1,232 @@
 /* You can add global styles to this file, and also import other style files */
+/* ===== Estilos globales ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #121212; /* Fondo oscuro */
+  color: #ffffff;            /* Texto principal */
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  color: #ff9500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #e68a00;
+}
+
+/* ===== Contenedor principal ===== */
+:root {
+  --primary-color: #ff9500;
+  --success-color: #34c759;
+  --danger-color: #ff3b30;
+  --card-bg: #1e1e1e;
+  --btn-bg: #2a2a2a;
+  --btn-hover: #3a3a3a;
+  --btn-active: #444444;
+}
+
+/* Contenedores */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Botones */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  background-color: var(--btn-bg);
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+}
+
+button:active {
+  background-color: var(--btn-active);
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: #e68a00;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+}
+.btn-success:hover {
+  background-color: #28a745;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+}
+.btn-danger:hover {
+  background-color: #e02e25;
+}
+
+/* Inputs y formularios */
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaaaaa;
+}
+
+/* Tarjetas / contenedores */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* Calculadora */
+.calculator {
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  background: #121212;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin: 0 auto 30px auto;
+}
+
+.display {
+  background: #1e1e1e;
+  color: #ffffff;
+  font-size: 2.2em;
+  padding: 18px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  text-align: right;
+  min-height: 60px;
+  overflow: hidden;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 16px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  background: var(--btn-bg);
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+.btn:active {
+  background: var(--btn-active);
+  transform: translateY(1px);
+}
+
+.btn-number {
+  background: var(--btn-bg);
+}
+
+.btn-operator {
+  background: var(--primary-color);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-operator:hover {
+  background: #e68a00;
+}
+
+.btn-clear {
+  background: var(--danger-color);
+  color: #ffffff;
+  grid-column: span 2;
+}
+
+.btn-clear:hover {
+  background: #e02e25;
+}
+
+.btn-delete {
+  background: #ff9f0a;
+  color: #ffffff;
+}
+
+.btn-delete:hover {
+  background: #e68a00;
+}
+
+.btn-equals {
+  background: var(--success-color);
+  color: #ffffff;
+  grid-column: span 2;
+  font-weight: 600;
+}
+
+.btn-equals:hover {
+  background: #28a745;
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
+
+/* ===== Media queries ===== */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .display {
+    font-size: 2em;
+    padding: 15px;
+  }
+
+  .btn {
+    padding: 14px;
+    font-size: 1.1em;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
