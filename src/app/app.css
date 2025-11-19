@@ -4,13 +4,23 @@
   box-sizing: border-box;
 }
 
+:root{
+  --bg-1: #f6fafc;
+  --bg-2: #f0f6fb;
+  --accent: #1e88e5;
+  --muted: #5e7aa3;
+  --card-shadow: rgba(14,35,64,0.08);
+}
+
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  color: #0f1724;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding: 36px 12px;
 }
 
 app-root {
@@ -18,66 +28,67 @@ app-root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
-  padding: 20px;
 }
 
 h1 {
-  color: #fff;
+  color: #072146;
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  letter-spacing: 2px;
+  margin-bottom: 8px;
+  font-size: 2.25em;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-  }
+  h1 { font-size: 1.6em; }
 }
 
-.app-header {
-  text-align: center;
-  margin-bottom: 18px;
-}
+.app-header { text-align: center; margin-bottom: 10px; }
 
 .subtitle {
-  color: rgba(255,255,255,0.9);
+  color: #274b74;
   margin-top: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-size: 1rem;
-  opacity: 0.95;
 }
 
 .apps {
   display: flex;
-  gap: 28px;
+  gap: 22px;
   align-items: flex-start;
   justify-content: center;
   width: 100%;
   max-width: 1200px;
-  padding: 0 12px;
 }
 
 .card {
-  background: rgba(255,255,255,0.95);
-  border-radius: 14px;
+  background: #ffffff;
+  border-radius: 12px;
   padding: 18px;
-  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+  box-shadow: 0 14px 36px var(--card-shadow);
   flex: 1 1 420px;
   max-width: 520px;
+  border: 1px solid rgba(39,75,116,0.06);
+  position: relative;
+  overflow: visible;
 }
 
-.card-title {
-  margin: 0 0 12px 0;
-  font-size: 1.1rem;
-  color: #222;
+.card::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background: linear-gradient(180deg, var(--accent), #1565c0);
 }
+
+.card-title { margin: 0 0 12px 0; font-size: 1.05rem; color: #072146; }
 
 @media (max-width: 900px) {
-  .apps { flex-direction: column; gap: 18px; }
+  .apps { flex-direction: column; gap: 16px; }
   .card { max-width: 100%; }
 }
